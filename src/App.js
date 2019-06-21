@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
-import DateFilter from './components/DateFilter'
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <div className="App">
 
-      <DateFilter />
+
+      <Dashboard />
     </div>
   );
 }

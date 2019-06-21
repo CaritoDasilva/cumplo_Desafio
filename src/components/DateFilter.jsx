@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import './DateFilter.scss';
+
+//Redux
+import { connect } from 'react-redux';
+import { changeDatePickerStart } from '../actions/datesActions';
 
 const date = new Date()
 export default class DateFilter extends Component {
@@ -26,9 +31,7 @@ export default class DateFilter extends Component {
         console.log(date)
         this.setState({
             startDate: date
-        });
-
-
+        })
     }
 
     handleChangeEnd(date) {
@@ -43,26 +46,38 @@ export default class DateFilter extends Component {
     render() {
         const { startDate, endDate } = this.state
         return (
-            <div>
+            <div className="filterDateContainer">
+                <label htmlFor="Desde"> Desde:
+                    <DatePicker
+                        dateFormat="dd/MM/yyyy"
+                        selected={startDate}
+                        selectsStart
+                        startDate={startDate}
+                        endDate={endDate}
+                        onChange={this.handleChangeStart}
+                        className="filterDate"
+                    />
+                </label>
+                <label htmlFor="Hasta">Hasta:
                 <DatePicker
-                    dateFormat="dd/MM/yyyy"
-                    selected={startDate}
-                    selectsStart
-                    startDate={startDate}
-                    endDate={endDate}
-                    onChange={this.handleChangeStart}
-                />
-                <DatePicker
-                    dateFormat="dd/MM/yyyy"
-                    selected={endDate}
-                    selectsEnd
-                    startDate={startDate}
-                    endDate={endDate}
-                    onChange={this.handleChangeEnd}
-                    minDate={startDate}
-                />
+                        dateFormat="dd/MM/yyyy"
+                        selected={endDate}
+                        selectsEnd
+                        startDate={startDate}
+                        endDate={endDate}
+                        onChange={this.handleChangeEnd}
+                        minDate={startDate}
+                        className="filterDate"
+                    />
+                </label>
+
             </div>
         )
     }
 }
 
+const mapStateToProps = state => {
+    dateAct: state.dateAct.dateAct
+}
+
+export default connect(mapStateToProps, { changeDatePickerStart })(DateFilter)
