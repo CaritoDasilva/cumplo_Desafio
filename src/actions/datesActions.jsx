@@ -1,13 +1,15 @@
 import { CHANGE_DATESTART, CHANGE_FINALDATE } from '../actions/types';
 
-export const changeDatePickerStart = () => {
+export const changeDatePickerStart = (date) => {
     return {
-        type: CHANGE_DATESTART
+        type: CHANGE_DATESTART,
+        payload: date
     }
 }
 
-export const changeDatePickerEnd = () => {
+export const changeDatePickerEnd = (date) => {
     return {
-        type: CHANGE_FINALDATE
+        type: CHANGE_FINALDATE,
+        payload: date
     }
 }

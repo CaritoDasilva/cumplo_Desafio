@@ -3,5 +3,5 @@ import datesReducers from './datesReducers';
 
 
 export default combineReducers({
-    startDate: datesReducers
+    dates: datesReducers
 });

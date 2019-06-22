@@ -2,6 +2,8 @@ import { CHANGE_DATESTART, CHANGE_FINALDATE } from '../actions/types';
 
 //State Inicial
 
+const date = new Date();
+
 const stateInitial = {
     dateAct: Math.round(Date.now()),
     startDate: new Date(date.getFullYear(), date.getMonth(), 1),
@@ -16,7 +18,12 @@ export default function (state = stateInitial, action) {
         case CHANGE_DATESTART:
             return {
                 ...state,
-                startDate: [...this.state.startDate, newStartDate];
+                startDate: action.payload
+            }
+        case CHANGE_FINALDATE:
+            return {
+                ...state,
+                endDate: action.payload
             }
 
         default:
