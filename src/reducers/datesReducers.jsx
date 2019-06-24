@@ -1,4 +1,4 @@
-import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE, AVERAGE_DOLLAR, GET_DATA } from '../actions/types';
+import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE, AVERAGE_DOLLAR } from '../actions/types';
 
 //State Inicial
 
@@ -40,11 +40,6 @@ export default function (state = stateInitial, action) {
             return {
                 ...state,
                 dollarAverages: action.payload
-            }
-        case GET_DATA:
-            return {
-                ...state,
-                dollars: action.payload
             }
 
         default:

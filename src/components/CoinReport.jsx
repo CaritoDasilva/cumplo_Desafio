@@ -47,7 +47,6 @@ class CoinReport extends Component {
                     date: dollar.Fecha
                 })
             })
-            console.log(_data)
             if (prevState === undefined) {
                 if (this.props.dates.dollars.length === 0) {
                     return this.props.dollarsValuesAndDates(_data)
@@ -86,7 +85,6 @@ class CoinReport extends Component {
                     </BarChart>
                 </div>
             </Provider>
-
         )
     }
 }

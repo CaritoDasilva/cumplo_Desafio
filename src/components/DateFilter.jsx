@@ -21,7 +21,6 @@ class DateFilter extends Component {
                     <Form>
                         <Form.Group>
                             <Form.Label className="fontLabel">Desde:</Form.Label>
-
                             <DatePicker
                                 dateFormat="dd/MM/yyyy"
                                 selected={startDate}
@@ -32,8 +31,6 @@ class DateFilter extends Component {
                                 onChange={this.props.changeDatePickerStart}
                                 className="filterDate"
                             />
-
-
                             <Form.Label className="fontLabel">Hasta:</Form.Label>
                             <DatePicker
                                 dateFormat="dd/MM/yyyy"
@@ -45,7 +42,6 @@ class DateFilter extends Component {
                                 minDate={startDate}
                                 className="filterDate"
                             />
-
                         </Form.Group>
                     </Form>
                 </div>

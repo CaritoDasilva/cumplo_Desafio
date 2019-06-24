@@ -18,13 +18,5 @@ const store = createStore(rootReducer, stateInitial, compose(applyMiddleware(...
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ));
 
-//Suscribe
-
-// store.subscribe(() => {
-//     console.log('Cambie')
-// })
-
-// //Dispatch es la forma de cambiar el state
-// store.dispatch({ type: 'CHANGE_DATE', endDate: Date.now() })
 
 export default store;

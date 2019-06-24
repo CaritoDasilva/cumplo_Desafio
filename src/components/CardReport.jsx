@@ -19,7 +19,6 @@ class CardReport extends Component {
         }
         if (Object.values(this.props.dates.dollarAverages).length === 0) {
             const getDollarData = this.getAverageValues()
-            console.log(this.props)
             return this.props.setAverageDollar(getDollarData)
         }
         if (Object.values(prevProps.dates.dollarAverages).length === 0) {
@@ -32,13 +31,9 @@ class CardReport extends Component {
         return null
     }
 
-
-
-
     getAverageValues() {
 
         const { dollars } = this.props.dates
-        console.log(dollars)
         const dollarsValue = dollars.map(dollar => dollar.value)
         const dollarsValueOrder = dollarsValue.sort()
         const minValueDollar = dollarsValueOrder[0]
@@ -54,11 +49,8 @@ class CardReport extends Component {
 
 
     render() {
-        console.log(this.props)
-
         return (
             <Provider store={store}>
-
                 <div>
                     <Card>
                         <Card.Body>
@@ -72,7 +64,6 @@ class CardReport extends Component {
                     </Card>
                 </div>
             </Provider>
-
         )
     }
 }
