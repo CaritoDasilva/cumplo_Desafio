@@ -1,17 +1,35 @@
 import React, { Component } from 'react'
-import DateFilter from './DateFilter';
+import DateFilter from './DateFilter'
 import { Provider } from 'react-redux'
 import store from './store'
+import CoinReport from './CoinReport'
+import CardReport from './CardReport'
+
+
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+
 export default class Dashboard extends Component {
 
     render() {
         return (
             <Provider store={store}>
-                <div>
-                    <DateFilter />
-
-                </div>
+                <Row>
+                    <Col>
+                        <DateFilter />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={6}>
+                        <CoinReport />
+                    </Col>
+                    <Col md={6}>
+                        <CardReport />
+                    </Col>
+                </Row>
             </Provider>
         )
     }
 }
+

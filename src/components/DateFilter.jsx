@@ -9,26 +9,7 @@ import { changeDatePickerStart, changeDatePickerEnd } from '../actions/datesActi
 import store from './store'
 
 
-const date = new Date()
 class DateFilter extends Component {
-
-
-
-    componentDidMount() {
-        console.log(this.props)
-    }
-
-
-
-
-    handleChangeEnd(date) {
-        console.log(date)
-        this.setState({
-            endDate: date
-        });
-
-
-    }
 
     render() {
         const { startDate, endDate } = this.props.dates
@@ -42,6 +23,7 @@ class DateFilter extends Component {
                             selectsStart
                             startDate={startDate}
                             endDate={endDate}
+                            maxDate={endDate}
                             onChange={this.props.changeDatePickerStart}
                             className="filterDate"
                         />

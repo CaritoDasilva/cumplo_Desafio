@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/bar": "^0.59.0",
+    "bootstrap": "^4.3.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-datepicker": "^2.7.0",
     "react-dom": "^16.8.6",
+    "react-native-responsive-linechart": "^2.0.1",
     "react-redux": "^7.1.0",
     "react-scripts": "3.0.1",
+    "recharts": "^1.6.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },

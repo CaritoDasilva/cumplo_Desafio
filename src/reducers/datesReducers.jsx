@@ -1,4 +1,4 @@
-import { CHANGE_DATESTART, CHANGE_FINALDATE } from '../actions/types';
+import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE } from '../actions/types';
 
 //State Inicial
 
@@ -7,7 +7,8 @@ const date = new Date();
 const stateInitial = {
     dateAct: Math.round(Date.now()),
     startDate: new Date(date.getFullYear(), date.getMonth(), 1),
-    endDate: new Date()
+    endDate: new Date(),
+    dollars: []
 }
 
 //Reducer
@@ -24,6 +25,15 @@ export default function (state = stateInitial, action) {
             return {
                 ...state,
                 endDate: action.payload
+            }
+        case SHOW_DATES:
+            return {
+                ...state
+            }
+        case DOLLARS_VALLUE:
+            return {
+                ...state,
+                dollars: action.payload
             }
 
         default:
