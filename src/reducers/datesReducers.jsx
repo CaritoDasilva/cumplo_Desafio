@@ -1,4 +1,4 @@
-import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE } from '../actions/types';
+import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE, AVERAGE_DOLLAR, GET_DATA } from '../actions/types';
 
 //State Inicial
 
@@ -8,7 +8,8 @@ const stateInitial = {
     dateAct: Math.round(Date.now()),
     startDate: new Date(date.getFullYear(), date.getMonth(), 1),
     endDate: new Date(),
-    dollars: []
+    dollars: [],
+    dollarAverages: {}
 }
 
 //Reducer
@@ -35,8 +36,19 @@ export default function (state = stateInitial, action) {
                 ...state,
                 dollars: action.payload
             }
+        case AVERAGE_DOLLAR:
+            return {
+                ...state,
+                dollarAverages: action.payload
+            }
+        case GET_DATA:
+            return {
+                ...state,
+                dollars: action.payload
+            }
 
         default:
             return state;
     }
 }
+
