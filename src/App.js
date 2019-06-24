@@ -1,18 +1,17 @@
 import React from 'react';
 import './App.scss';
+import fondo from './assets/fondo.jpg';
 import Dashboard from './components/Dashboard';
 
-//Redux
-import { Provider } from 'react-redux';
-import store from './components/store'
 
 function App() {
   return (
-    <Provider store={store}>
+
+    <div>
       <div className="App">
         <Dashboard />
       </div>
-    </Provider>
+    </div>
   );
 }
 

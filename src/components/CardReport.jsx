@@ -25,20 +25,11 @@ class CardReport extends Component {
         if (Object.values(prevProps.dates.dollarAverages).length === 0) {
             return null
         }
-
-
         if (this.props.dates.dollars.length !== prevProps.dates.dollars.length) {
-
             const getDollarData = this.getAverageValues()
             return this.props.setAverageDollar(getDollarData)
-            console.log(this.props)
-
-
         }
         return null
-
-
-
     }
 
 
