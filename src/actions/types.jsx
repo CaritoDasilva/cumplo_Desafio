@@ -1,5 +1,4 @@
 export const SHOW_DATES = 'SHOW_DATES';
-export const GET_DATA = 'GET_DATA';
 export const CHANGE_DATESTART = 'CHANGE_DATESTART';
 export const CHANGE_FINALDATE = 'CHANGE_FINALDATE';
 export const DOLLARS_VALLUE = 'DOLLARS_VALLUE';

@@ -1,4 +1,4 @@
-import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE } from '../actions/types';
+import { CHANGE_DATESTART, CHANGE_FINALDATE, SHOW_DATES, DOLLARS_VALLUE, AVERAGE_DOLLAR } from '../actions/types';
 
 export const changeDatePickerStart = (date) => {
     return {

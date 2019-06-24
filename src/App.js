@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import fondo from './assets/fondo.jpg';
 import Dashboard from './components/Dashboard';
 
 

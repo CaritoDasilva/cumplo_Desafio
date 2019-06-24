@@ -7,7 +7,7 @@ import { getDates, dollarsValuesAndDates } from '../actions/datesActions';
 
 //Barchart
 import {
-    BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
 
