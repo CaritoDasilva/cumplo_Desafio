@@ -17,18 +17,15 @@ export default class Dashboard extends Component {
         return (
             <Provider store={store}>
                 <Row className="justify-content-md-center">
-                    <Col md={{ span: 6, offset: 3 }}>
+                    <Col xs={12} md={{ span: 6, offset: 3 }}>
                         <h1>DÓLAR ONLINE</h1>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">
-                    <Col md={{ span: 8, offset: 1 }}>
+                    <Col xs={12} md={{ span: 8, offset: 1 }}>
                         <h4>¿Quieres informarte sobre las fluctuaciones del dólar en un rango de fechas?</h4>
                     </Col>
                     <h5>Introduce las fechas en las que necesitas conocer y obtén un informe detallado para tomar decisiones informadas.</h5>
-                    <Col md={{ span: 8, offset: 1 }}>
-
-                    </Col>
                 </Row>
                 <Row>
                     <Col>

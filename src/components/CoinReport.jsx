@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 
+//Bootstrap
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+
 //Redux
 import { connect, Provider } from 'react-redux';
 import store from './store'
@@ -67,22 +72,25 @@ class CoinReport extends Component {
         return (
             <Provider store={store}>
                 <div className="responsiveBarContainer">
-                    <BarChart
-                        width={500}
-                        height={300}
-                        data={this.props.dates.dollars}
-                        margin={{
-                            top: 5, right: 30, left: 20, bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="date" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="value" fill="#8884d8" />
-
-                    </BarChart>
+                    <Row>
+                        <Col xs={12} md={8}>
+                            <BarChart
+                                width={500}
+                                height={300}
+                                data={this.props.dates.dollars}
+                                margin={{
+                                    top: 5, right: 30, left: 20, bottom: 5,
+                                }}
+                            >
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="date" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Bar dataKey="value" fill="#8884d8" />
+                            </BarChart>
+                        </Col>
+                    </Row>
                 </div>
             </Provider>
         )

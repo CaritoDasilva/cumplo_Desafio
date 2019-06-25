@@ -4,6 +4,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import './DateFilter.scss';
 import Form from 'react-bootstrap/Form';
 
+//Bootstrap
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 //Redux
 import { connect, Provider } from 'react-redux';
@@ -20,28 +23,34 @@ class DateFilter extends Component {
                 <div className="filterDateContainer">
                     <Form>
                         <Form.Group>
-                            <Form.Label className="fontLabel">Desde:</Form.Label>
-                            <DatePicker
-                                dateFormat="dd/MM/yyyy"
-                                selected={startDate}
-                                selectsStart
-                                startDate={startDate}
-                                endDate={endDate}
-                                maxDate={endDate}
-                                onChange={this.props.changeDatePickerStart}
-                                className="filterDate"
-                            />
-                            <Form.Label className="fontLabel">Hasta:</Form.Label>
-                            <DatePicker
-                                dateFormat="dd/MM/yyyy"
-                                selected={endDate}
-                                selectsEnd
-                                startDate={startDate}
-                                endDate={endDate}
-                                onChange={this.props.changeDatePickerEnd}
-                                minDate={startDate}
-                                className="filterDate"
-                            />
+                            <Row>
+                                <Col xs={12} md={4}>
+                                    <Form.Label className="fontLabel">Desde:</Form.Label>
+                                    <DatePicker
+                                        dateFormat="dd/MM/yyyy"
+                                        selected={startDate}
+                                        selectsStart
+                                        startDate={startDate}
+                                        endDate={endDate}
+                                        maxDate={endDate}
+                                        onChange={this.props.changeDatePickerStart}
+                                        className="filterDate"
+                                    />
+                                </Col>
+                                <Col xs={12} md={4}>
+                                    <Form.Label className="fontLabel">Hasta:</Form.Label>
+                                    <DatePicker
+                                        dateFormat="dd/MM/yyyy"
+                                        selected={endDate}
+                                        selectsEnd
+                                        startDate={startDate}
+                                        endDate={endDate}
+                                        onChange={this.props.changeDatePickerEnd}
+                                        minDate={startDate}
+                                        className="filterDate"
+                                    />
+                                </Col>
+                            </Row>
                         </Form.Group>
                     </Form>
                 </div>

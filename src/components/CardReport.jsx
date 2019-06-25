@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+
+//Bootstrap
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 
 //Redux
@@ -51,18 +55,20 @@ class CardReport extends Component {
     render() {
         return (
             <Provider store={store}>
-                <div>
-                    <Card>
-                        <Card.Body>
-                            <h3>Máx. Valor:</h3>
-                            <h5>{this.props.dates.dollarAverages.maxValueDollar}</h5>
-                            <h3>Min. Valor:</h3>
-                            <h5>{this.props.dates.dollarAverages.minValueDollar}</h5>
-                            <h3>Valor Promedio:</h3>
-                            <h5>{this.props.dates.dollarAverages.dollarProm}</h5>
-                        </Card.Body>
-                    </Card>
-                </div>
+                <Row>
+                    <Col xs={12} md={8}>
+                        <Card>
+                            <Card.Body>
+                                <h3>Máx. Valor:</h3>
+                                <h5>{this.props.dates.dollarAverages.maxValueDollar}</h5>
+                                <h3>Min. Valor:</h3>
+                                <h5>{this.props.dates.dollarAverages.minValueDollar}</h5>
+                                <h3>Valor Promedio:</h3>
+                                <h5>{this.props.dates.dollarAverages.dollarProm}</h5>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
             </Provider>
         )
     }

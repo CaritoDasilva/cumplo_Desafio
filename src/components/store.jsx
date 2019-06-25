@@ -14,8 +14,7 @@ const stateInitial = {};
 
 
 //Store(Contiene el state de la aplicación) y Create Store
-const store = createStore(rootReducer, stateInitial, compose(applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store = createStore(rootReducer, stateInitial, compose(applyMiddleware(...middleware)
 ));
 
 
